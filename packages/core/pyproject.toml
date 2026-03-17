@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finrag-core"
+version = "0.1.0"
+description = "FinRAG domain models, interfaces, and services"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic[email]>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "structlog>=24.2.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finrag_core"]

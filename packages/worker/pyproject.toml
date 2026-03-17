@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finrag-worker"
+version = "0.1.0"
+description = "FinRAG async document processing worker"
+requires-python = ">=3.11"
+dependencies = [
+    "finrag-core",
+    "finrag-infra",
+    "arq>=0.26.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finrag_worker"]
